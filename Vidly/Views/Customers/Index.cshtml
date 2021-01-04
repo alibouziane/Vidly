@@ -26,6 +26,7 @@ else
         <thead>
             <tr>
                 <th>Customer</th>
+                <th>MemberShip Type</th>
             </tr>
         </thead>
         <tbody>
@@ -33,15 +34,20 @@ else
             {
                 <tr>
                     <td>
+                        @*@Html.ActionLink(linkText: customer.Name,
+                            actionName: "Details",
+                            controllerName: "Customers",
+                            routeValues: new { id = customer.Id },
+                            htmlAttributes: null)*@
+                        
                         @Html.ActionLink(linkText: customer.Name,
-                       actionName: "Details",
-                       controllerName: "Customers",
-                       routeValues: new { id = customer.Id },
-                       htmlAttributes: null)
+                            actionName: "Edit",
+                            controllerName: "Customers",
+                            routeValues: new { id = customer.Id },
+                            htmlAttributes: null)
+
                     </td>
-
-
-
+                    <td>@customer.MembershipType.Name</td>
 
                 </tr>
             }
