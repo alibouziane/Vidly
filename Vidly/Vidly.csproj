@@ -197,6 +197,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Migrations\202101041353091_editMovies.cs" />
+    <Compile Include="Migrations\202101041353091_editMovies.Designer.cs">
+      <DependentUpon>202101041353091_editMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
+    <Compile Include="ViewModel\GenreForViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -329,7 +335,8 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
-    <Content Include="Views\Customers\CustomerFor.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -378,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012291504296_Genres.resx">
       <DependentUpon>202012291504296_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101041353091_editMovies.resx">
+      <DependentUpon>202101041353091_editMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
