@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
-using Vidly.ViewModel;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
