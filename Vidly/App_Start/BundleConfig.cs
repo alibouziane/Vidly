@@ -20,11 +20,13 @@ namespace Vidly
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/bootstrap.js",
+                      "~/scripts/bootbox.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-Lumen.css",
+                      "~/Content/bootstrap-lumen.css",
                       "~/Content/site.css"));
         }
     }
