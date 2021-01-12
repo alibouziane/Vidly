@@ -20,13 +20,13 @@
     <tbody></tbody>
 </table>
 
-
 @section scripts
 {
     <script>
-        
+
         $(document).ready(function () {
             var table = $("#movies").DataTable({
+                keys: true,
                 ajax: {
                     url: "/api/movies",
                     dataSrc: ""
@@ -53,13 +53,14 @@
                 var button = $(this);
                 bootbox.confirm("Are you sure you want to delete this movie?", function (result) {
                     if (result) {
-                        $.ajax({
-                            url: "/api/movies/" + button.attr("data-movie-id"),
-                            method: "DELETE",
-                            success: function () {
-                                table.row(button.parents("tr")).remove().draw();
-                            }
-                        });
+                       
+                            $.ajax({
+                                url: "/api/movies/" + button.attr("data-movie-id"),
+                                method: "DELETE",
+                                success: function () {
+                                    table.row(button.parents("tr")).remove().draw();
+                                }
+                            });
                     }
                 });
             });

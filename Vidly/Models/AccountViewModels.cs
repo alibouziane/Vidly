@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.Owin.Security.DataHandler;
 
 namespace Vidly.Models
 {
@@ -8,6 +9,14 @@ namespace Vidly.Models
         [Required]
         [Display(Name = "Courrier électronique")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Driving License")]
+        public string DrivingLicense { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -65,6 +74,9 @@ namespace Vidly.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Driving License")]
+        public string DrivingLicense { get; set; }
+        [Required]
         [EmailAddress]
         [Display(Name = "Courrier électronique")]
         public string Email { get; set; }
@@ -79,6 +91,10 @@ namespace Vidly.Models
         [Display(Name = "Confirmer le mot de passe ")]
         [Compare("Password", ErrorMessage = "Le mot de passe et le mot de passe de confirmation ne correspondent pas.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
     }
 
     public class ResetPasswordViewModel
