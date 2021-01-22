@@ -14,5 +14,7 @@ namespace Vidly.Migrations
         {
             DropColumn("dbo.AspNetUsers", "Phone");
         }
+
+        
     }
 }
